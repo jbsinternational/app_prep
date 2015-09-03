@@ -1,0 +1,6 @@
+.contain-width {
+	@include breakpoint($max-width) {
+		width: $max-width;
+		margin:0 auto;
+	}
+}

@@ -1,0 +1,23 @@
+.filter.reset.active {
+	display: none;
+}
+
+
+#river {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+	.mix{
+		display: none;
+	}
+}
+.resource {
+  max-width: 316px;
+  margin: $pad;
+	&-image {
+		background-size: cover;
+		// max-width: 316px;
+		width: 100%;
+	}
+}

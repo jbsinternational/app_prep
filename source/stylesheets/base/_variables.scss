@@ -1,0 +1,30 @@
+$font: 'Roboto', sans-serif;
+$font-cond: 'Roboto Condensed', sans-serif;
+$font-slab: 'Roboto Slab', serif;
+
+$green: #5daca2;
+$peach: #f7966c;
+$drk-blue: #264a64;
+// official med blue:
+// $med-blue: #548ab0;
+// med-blue used for icon:v
+$med-blue: #346b90;
+$lgt-blue: #bcd9ed;
+$brown: #2d261a; 
+$tan: #cfc1ae;
+$lgt-tan: #f6f3ee;
+$cream: #fef5e4;
+
+$max-width: 1008px;
+
+$pad: 10px;
+
+@mixin hw($height,$width){
+	height: $height;
+	width: $width;
+}
+
+@mixin retina($img-url){
+	height: image-height($img-url)/2;
+	width: image-width($img-url)/2;
+}

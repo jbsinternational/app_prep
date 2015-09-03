@@ -1,0 +1,15 @@
+!!! 5
+%html
+  %head
+    %title Middleman
+    %meta{:charset => "utf-8"}
+    %meta{:content => "Middleman", :name => "description"}
+    %meta{:content => "on", "http-equiv" => "cleartype"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,700italic|Alegreya+Sans:400,400italic,500,500italic,700,700italic'
+    = stylesheet_link_tag 'style'
+    = javascript_include_tag 'main'
+  %body
+    = render_partial 'header'
+    = yield
+    = render_partial 'footer'

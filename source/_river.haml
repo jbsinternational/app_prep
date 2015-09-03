@@ -1,0 +1,27 @@
+.controls.contain-width
+ .filters
+  %p Filter by topic:
+  .filter.relations{:"data-filter" => ".relations"} relations icon
+  .filter.adol{:"data-filter" => ".adol"} adol icon
+  .filter.money{:"data-filter" => ".money"} money icon
+  .filter.skills{:"data-filter" => ".skills"} skills icon
+  .filter.comm{:"data-filter" => ".comm"} comm icon
+  .filter.career{:"data-filter" => ".career"} career icon
+  .filter.reset{:"data-filter" => "all"} | Show All Topics
+ .sort
+  %p Sort:
+  .sort{:"data-sort" => "date:desc"} Date Descending
+  .sort{:"data-sort" => "date:asc"} Date Ascending
+  .sort{:"data-sort" => "random"} Random
+#river.contain-width
+ - data.resources.each_with_index do |resource, index|
+  %a{:class => "mix resource #{resource.topic} #{resource.type}", :"data-date" => "#{resource.date}", :href => "#{resource.target}"}
+   .resource-header icon and stuff
+   - if /http/.match("#{resource.image}")
+    %img{:src => "#{resource.image}", :class => "resource-image"}
+   - else
+    %img{:src => "/images/resources/#{resource.image}", :class => "resource-image"}
+   .resource-title #{resource.title}
+   .resource-footer
+    .resource-type #{resource.type}
+    .resource-share Share
